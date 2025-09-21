@@ -1,1 +1,1 @@
-export const apiURl = 'http://localhost:5000/api'
+export const apiURl = "https://football-server-jm1k.onrender.com/api";
