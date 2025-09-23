@@ -1,19 +1,23 @@
 export const headerLinks = [
 	{
-		title: "Home",
+		title: "LiveScore",
 		link: "/",
 	},
 	{
-		title: "Daily Picks",
+		title: "All Tips",
+		link: "/tips",
+	},
+	{
+		title: "VIP TIPS",
 		link: "/",
 	},
 	{
 		title: "X (Twitter)",
-		link: "/",
+		link: "https://x.com/Big_Chidd__",
 	},
 	{
 		title: "Contact",
-		link: "/",
+		link: "/contact",
 	},
 ];
 

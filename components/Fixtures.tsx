@@ -3,37 +3,14 @@ import { useEffect, useState } from "react";
 import { getAllMatches } from "@/utils/functions";
 import Lazy from "./ui/Lazy";
 import Image from "next/image";
-
-type Team = {
-	id: number;
-	name: string;
-	crest?: string;
-};
-
-type Area = {
-	id: number;
-	name: string;
-	flag?: string;
-};
-
-type Fixture = {
-	id: number;
-	utcDate: string;
-	area: Area;
-	homeTeam: Team;
-	awayTeam: Team;
-	status: string; 
-	score: {
-		fullTime: {
-			home: number | null;
-			away: number | null;
-		};
-	};
-};
+import Head2HeadCard from "./Head2HeadCard";
 
 const Fixtures = () => {
-	const [fixtures, setFixtures] = useState<Fixture[]>([]);
+	const [fixtures, setFixtures] = useState<any[]>([]);
 	const [loading, setLoading] = useState(true);
+	const [selectedMatch, setSelectedMatch] = useState<number | null>(
+		null
+	);
 
 	useEffect(() => {
 		const getMatches = async () => {
@@ -75,7 +52,8 @@ const Fixtures = () => {
 				{fixtures.map((fixture) => (
 					<div
 						key={fixture.id}
-						className='bg-zinc-900 rounded-2xl shadow-lg border border-green-600 p-4 flex flex-col gap-4 hover:scale-[1.02] transition-transform'
+						className='bg-zinc-900 rounded-2xl shadow-lg border border-green-600 p-4 flex flex-col gap-4 hover:scale-[1.02] transition-transform cursor-pointer'
+						onClick={() => setSelectedMatch(fixture.id)}
 					>
 						{/* Country/League Info */}
 						<div className='flex justify-between items-center'>
@@ -107,7 +85,6 @@ const Fixtures = () => {
 
 						{/* Teams */}
 						<div className='flex justify-between items-center'>
-							{/* Home */}
 							<div className='flex flex-col items-center gap-2 flex-1'>
 								{fixture.homeTeam.crest && (
 									<Image
@@ -121,12 +98,9 @@ const Fixtures = () => {
 									{fixture.homeTeam.name}
 								</p>
 							</div>
-
 							<span className='text-xs font-bold text-gray-300 px-2'>
 								VS
 							</span>
-
-							{/* Away */}
 							<div className='flex flex-col items-center gap-2 flex-1'>
 								{fixture.awayTeam.crest && (
 									<Image
@@ -150,7 +124,7 @@ const Fixtures = () => {
 							})}
 						</p>
 
-						{/* Score - show only if finished */}
+						{/* Score if finished */}
 						{fixture.status === "FINISHED" &&
 							fixture.score?.fullTime && (
 								<p className='text-center text-lg font-bold text-green-400 mt-2'>
@@ -158,9 +132,21 @@ const Fixtures = () => {
 									{fixture.score.fullTime.away}
 								</p>
 							)}
+
+						{/* Disclaimer */}
+						<p className='text-xs text-center text-gray-400 italic'>
+							Click to see head-to-head
+						</p>
 					</div>
 				))}
 			</div>
+
+			{selectedMatch && (
+				<Head2HeadCard
+					matchId={selectedMatch}
+					onClose={() => setSelectedMatch(null)}
+				/>
+			)}
 		</div>
 	);
 };
