@@ -9,34 +9,34 @@ export const headerLinks = [
 	},
 	{
 		title: "VIP TIPS",
-		link: "/",
+		link: "https://t.me/+EJ52ZgMKTNkyNzA0",
 	},
 	{
 		title: "X (Twitter)",
 		link: "https://x.com/Big_Chidd__",
 	},
-	{
-		title: "Contact",
-		link: "/contact",
-	},
+	// {
+	// 	title: "Contact",
+	// 	link: "/contact",
+	// },
 ];
 
 export const socials = [
 	{
 		name: "WhatsApp",
 		icon: "ic:baseline-whatsapp",
-		url: "",
+		url: "https://whatsapp.com/channel/0029ValMY0eDJ6GxihtTwb0F",
 	},
 
 	{
 		name: "X",
 		icon: "prime:twitter",
-		url: "",
+		url: "https://x.com/Big_Chidd__?t=x-aqELokFwJ6nCjPzwhzCA&s=09",
 	},
 	{
 		name: "Telegram",
 		icon: "mdi:telegram",
-		url: "",
+		url: "https://t.me/+EJ52ZgMKTNkyNzA0",
 	},
 	{
 		name: "Instagram",

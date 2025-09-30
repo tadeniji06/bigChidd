@@ -1,7 +1,9 @@
 "use client";
 
+import { logo1 } from "@/assets";
 import { headerLinks, socials } from "@/utils/data";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -60,9 +62,12 @@ const Header = () => {
 							className='flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 rounded-md'
 							onClick={closeMobileMenu}
 						>
-							<span className='text-xl font-bold text-gray-900 hover:text-gray-600 transition-colors duration-200'>
-								BigChidd
-							</span>
+							<Image
+								width={200}
+								height={120}
+								src={logo1}
+								alt='Logo'
+							/>
 						</Link>
 
 						{/* Desktop Navigation */}
@@ -83,7 +88,7 @@ const Header = () => {
 						{/* Desktop Social Icons */}
 						<div className='hidden md:flex items-center space-x-4'>
 							{socials.map((social, index) => (
-								<a
+								<Link
 									key={index}
 									href={social.url}
 									target='_blank'
@@ -97,7 +102,7 @@ const Header = () => {
 										className='text-xl text-gray-700 cursor-pointer hover:text-gray-900 transition-colors duration-200'
 										icon={social.icon}
 									/>
-								</a>
+								</Link>
 							))}
 						</div>
 
