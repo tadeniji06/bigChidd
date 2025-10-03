@@ -83,7 +83,7 @@ const Footer = () => {
 									icon='mdi:email-outline'
 									className='w-5 h-5 mr-2'
 								/>
-								<span className='text-sm'>bigchidd@gmail.com</span>
+								<span className='text-sm'>Chidville@gmail.com</span>
 							</a>
 
 							<div className='flex items-center text-main'>
