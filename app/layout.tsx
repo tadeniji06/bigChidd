@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
+import Adsense from "@/components/Adsense";
 
 export const metadata: Metadata = {
 	title: "BigChidd Tips",
@@ -22,6 +23,7 @@ export default function RootLayout({
 				<Header />
 				{children}
 				<Footer />
+				<Adsense />
 			</body>
 		</html>
 	);
