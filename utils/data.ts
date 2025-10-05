@@ -4,7 +4,7 @@ export const headerLinks = [
 		link: "/tips",
 	},
 	{
-		title: "Best 3 Tips",
+		title: "Best 6 Tips",
 		link: "/bestThree",
 	},
 	{
