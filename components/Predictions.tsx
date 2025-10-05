@@ -2,7 +2,6 @@
 import { useState } from "react";
 
 const Predictions = () => {
-	// This data will come from your JSON file - just displaying it
 	const [predictions] = useState([
 		{
 			_id: "pred_001",
