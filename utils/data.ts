@@ -1,24 +1,16 @@
 export const headerLinks = [
 	{
-		title: "LiveScore",
-		link: "/",
-	},
-	{
 		title: "All Tips",
 		link: "/tips",
 	},
 	{
-		title: "VIP TIPS",
-		link: "https://t.me/+EJ52ZgMKTNkyNzA0",
+		title: "Best 3 Tips",
+		link: "/bestThree",
 	},
 	{
 		title: "X (Twitter)",
 		link: "https://x.com/Big_Chidd__",
 	},
-	// {
-	// 	title: "Contact",
-	// 	link: "/contact",
-	// },
 ];
 
 export const socials = [

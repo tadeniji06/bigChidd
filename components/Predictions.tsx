@@ -1,51 +1,252 @@
 "use client";
-import { useEffect, useState } from "react";
-import { getPredictions } from "@/utils/functions";
-
-type Prediction = {
-	_id: string;
-	predictedWinner: "home" | "away" | "draw";
-	comment?: string;
-	isCorrect?: boolean;
-	match?: {
-		_id: string;
-		homeTeam: string;
-		awayTeam: string;
-		utcDate: string;
-		status: string;
-		finalResult?: {
-			homeGoals?: number;
-			awayGoals?: number;
-			outcome?: "home" | "away" | "draw";
-		};
-	};
-};
+import { useState } from "react";
 
 const Predictions = () => {
-	const [predictions, setPredictions] = useState<Prediction[]>([]);
-	const [loading, setLoading] = useState(true);
-
-	useEffect(() => {
-		const fetchData = async () => {
-			const data = await getPredictions();
-			setPredictions(data);
-			setLoading(false);
-		};
-		fetchData();
-	}, []);
-
-	if (loading) {
-		return (
-			<div className='bg-black min-h-screen flex items-center justify-center text-green-400'>
-				Loading predictions...
-			</div>
-		);
-	}
+	// This data will come from your JSON file - just displaying it
+	const [predictions] = useState([
+		{
+			_id: "pred_001",
+			predictedWinner: "draw",
+			odds: 2.95,
+			comment: "Multiple Draw Accumulator",
+			match: {
+				homeTeam: "Al Zawraa",
+				awayTeam: "Al Quwa Al Jawiya",
+				utcDate: "2025-10-06T14:00:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+		},
+		{
+			_id: "pred_002",
+			predictedWinner: "draw",
+			odds: 3.2,
+			comment: "Multiple Draw Accumulator",
+			match: {
+				homeTeam: "FK Macva Sabac",
+				awayTeam: "FK Loznica",
+				utcDate: "2025-10-06T14:00:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+		},
+		{
+			_id: "pred_003",
+			predictedWinner: "draw",
+			odds: 3.4,
+			comment: "Multiple Draw Accumulator",
+			match: {
+				homeTeam: "Hapoel Kfar Shalem FC",
+				awayTeam: "Maccabi Herzliya",
+				utcDate: "2025-10-06T15:00:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+		},
+		{
+			_id: "pred_004",
+			predictedWinner: "draw",
+			odds: 2.3,
+			comment: "Multiple Draw Accumulator",
+			match: {
+				homeTeam: "Chador Malu Yazd",
+				awayTeam: "Esteghlal FC",
+				utcDate: "2025-10-06T15:30:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+		},
+		{
+			_id: "pred_005",
+			predictedWinner: "draw",
+			odds: 2.85,
+			comment: "Multiple Draw Accumulator",
+			match: {
+				homeTeam: "Enppi Club",
+				awayTeam: "Zed FC",
+				utcDate: "2025-10-06T16:00:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+		},
+		{
+			_id: "pred_006",
+			predictedWinner: "draw",
+			odds: 3.25,
+			comment: "Multiple Draw Accumulator",
+			match: {
+				homeTeam: "Uniao SC Paredes",
+				awayTeam: "AD Marco 09",
+				utcDate: "2025-10-06T16:30:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+		},
+		{
+			_id: "pred_007",
+			predictedWinner: "draw",
+			odds: 3.0,
+			comment: "Multiple Draw Accumulator",
+			match: {
+				homeTeam: "FK Jezero Plav",
+				awayTeam: "OFK Petrovac",
+				utcDate: "2025-10-06T14:00:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+			// isCorrect: true,
+		},
+		{
+			_id: "pred_008",
+			predictedWinner: "draw",
+			odds: 3.1,
+			comment: "Multiple Draw Accumulator",
+			match: {
+				homeTeam: "Carrarese Calcio",
+				awayTeam: "Juve Stabia",
+				utcDate: "2025-10-06T17:00:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+		},
+		{
+			_id: "pred_009",
+			predictedWinner: "draw",
+			odds: 2.95,
+			comment: "Multiple Draw Accumulator",
+			match: {
+				homeTeam: "FK Zemun",
+				awayTeam: "FK Vozdovac Belgrade",
+				utcDate: "2025-10-06T15:00:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+		},
+		{
+			_id: "pred_010",
+			predictedWinner: "draw",
+			odds: 2.65,
+			comment: "Second Betting Slip",
+			match: {
+				homeTeam: "Floresta EC CE",
+				awayTeam: "Londrina EC PR",
+				utcDate: "2025-10-06T18:00:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+		},
+		{
+			_id: "pred_011",
+			predictedWinner: "draw",
+			odds: 2.65,
+			comment: "Second Betting Slip",
+			match: {
+				homeTeam: "Olympique Club de Safi",
+				awayTeam: "AS Far Rabat",
+				utcDate: "2025-10-06T18:00:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+			// isCorrect: false,
+		},
+		{
+			_id: "pred_012",
+			predictedWinner: "draw",
+			odds: 3.3,
+			comment: "Second Betting Slip",
+			match: {
+				homeTeam: "FK Sutjeska Niksic",
+				awayTeam: "FK Buducnost",
+				utcDate: "2025-10-06T16:00:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+		},
+		{
+			_id: "pred_013",
+			predictedWinner: "draw",
+			odds: 3.4,
+			comment: "Second Betting Slip",
+			match: {
+				homeTeam: "Gornik Zabrze",
+				awayTeam: "Legia Warszawa",
+				utcDate: "2025-10-06T17:30:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+		},
+		{
+			_id: "pred_014",
+			predictedWinner: "draw",
+			odds: 3.75,
+			comment: "Second Betting Slip",
+			match: {
+				homeTeam: "Copenhagen",
+				awayTeam: "FC Midtjylland",
+				utcDate: "2025-10-06T18:00:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+		},
+		{
+			_id: "pred_015",
+			predictedWinner: "draw",
+			odds: 3.7,
+			comment: "Second Betting Slip",
+			match: {
+				homeTeam: "AD Fafe",
+				awayTeam: "SC Sao Joao de Ver",
+				utcDate: "2025-10-06T16:30:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+		},
+		{
+			_id: "pred_016",
+			predictedWinner: "draw",
+			odds: 3.2,
+			comment: "Second Betting Slip",
+			match: {
+				homeTeam: "FK Tekstilac Odzaci",
+				awayTeam: "Gfk Dubocica",
+				utcDate: "2025-10-06T14:00:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+		},
+		{
+			_id: "pred_017",
+			predictedWinner: "draw",
+			odds: 3.4,
+			comment: "Second Betting Slip",
+			match: {
+				homeTeam: "FK Vardar Skopje",
+				awayTeam: "FC Struga Trim Lum",
+				utcDate: "2025-10-06T15:00:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+		},
+		{
+			_id: "pred_018",
+			predictedWinner: "draw",
+			odds: 3.0,
+			comment: "Second Betting Slip",
+			match: {
+				homeTeam: "FK Jezero Plav",
+				awayTeam: "OFK Petrovac",
+				utcDate: "2025-10-06T14:00:00Z",
+				status: "PENDING",
+				finalResult: null,
+			},
+			isCorrect: true,
+		},
+	]);
 
 	return (
-		<div className='bg-black min-h-screen py-6 px-4 text-green-400'>
-			<h1 className='text-2xl font-bold text-center mb-6'>
-				Predictions
+		<div className='bg-black min-h-screen py-6 px-4'>
+			<h1 className='text-3xl font-bold text-green-400 mb-8 text-center'>
+				Football Predictions
 			</h1>
 
 			<div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
@@ -56,66 +257,84 @@ const Predictions = () => {
 					>
 						{/* Teams */}
 						<div className='flex justify-between items-center'>
-							<span className='text-sm font-medium'>
-								{prediction.match?.homeTeam}
+							<span className='text-sm font-medium text-green-400'>
+								{prediction.match.homeTeam}
 							</span>
 							<span className='text-xs text-gray-400'>vs</span>
-							<span className='text-sm font-medium'>
-								{prediction.match?.awayTeam}
+							<span className='text-sm font-medium text-green-400'>
+								{prediction.match.awayTeam}
 							</span>
 						</div>
 
 						{/* Date */}
 						<p className='text-xs text-gray-400 text-center'>
-							{prediction.match?.utcDate &&
-								new Date(prediction.match.utcDate).toLocaleString(
-									"en-GB",
-									{
-										weekday: "short",
-										day: "2-digit",
-										month: "short",
-										hour: "2-digit",
-										minute: "2-digit",
-									}
-								)}
+							{new Date(prediction.match.utcDate).toLocaleString(
+								"en-GB",
+								{
+									weekday: "short",
+									day: "2-digit",
+									month: "short",
+									hour: "2-digit",
+									minute: "2-digit",
+								}
+							)}
 						</p>
 
 						{/* Prediction */}
 						<div className='text-center'>
-							<p className='text-sm'>Predicted:</p>
-							<p className='font-bold text-green-400 uppercase'>
+							<p className='text-sm text-gray-400'>Predicted:</p>
+							<p className='font-bold text-green-400 uppercase text-lg'>
 								{prediction.predictedWinner}
+							</p>
+							<p className='text-sm text-gray-400 mt-1'>
+								Odds: {prediction.odds}
 							</p>
 						</div>
 
 						{/* Comment */}
-						{prediction.comment && (
-							<p className='text-xs italic text-gray-400'>
-								“{prediction.comment}”
+						{/* {prediction.comment && (
+							<p className='text-xs italic text-gray-400 text-center'>
+								"{prediction.comment}"
 							</p>
-						)}
+						)} */}
 
-						{/* Status / Result */}
-						{prediction.match?.status === "FINISHED" && (
-							<div className='mt-2 text-center'>
-								<p className='text-xs'>Final Score:</p>
-								<p className='font-bold text-green-400'>
-									{prediction.match.finalResult?.homeGoals ?? "-"} -{" "}
-									{prediction.match.finalResult?.awayGoals ?? "-"}
-								</p>
-								{prediction.isCorrect !== undefined && (
-									<p
-										className={`text-xs font-semibold mt-1 ${
-											prediction.isCorrect
-												? "text-green-400"
-												: "text-red-400"
-										}`}
-									>
-										{prediction.isCorrect ? "✅ Correct" : "❌ Wrong"}
+						{/* Status Badge */}
+						<div className='flex justify-center mt-2'>
+							<span
+								className={`px-3 py-1 rounded-full text-xs font-semibold ${
+									prediction.match.status === "PENDING"
+										? "bg-yellow-900 text-yellow-400"
+										: "bg-green-900 text-green-400"
+								}`}
+							>
+								{prediction.match.status}
+							</span>
+						</div>
+
+						{/* Result (if finished) */}
+						{prediction.match.status === "FINISHED" &&
+							prediction.match.finalResult && (
+								<div className='mt-2 pt-3 border-t border-gray-700 text-center'>
+									<p className='text-xs text-gray-400'>
+										Final Score:
 									</p>
-								)}
-							</div>
-						)}
+									{/* <p className='font-bold text-green-400 text-2xl my-1'>
+										{prediction.match.finalResult.homeGoals} -{" "}
+										{prediction.match.finalResult.awayGoals}
+									</p> */}
+									{prediction.isCorrect !== undefined && (
+										<p
+											className={`text-sm font-semibold mt-2 ${
+												prediction.isCorrect
+													? "text-green-400"
+													: "text-red-400"
+											}`}
+										>
+											{prediction.isCorrect ? "✅ WIN" : "❌ LOST"}
+										</p>
+									)}
+								</div>
+							)}
 					</div>
 				))}
 			</div>
