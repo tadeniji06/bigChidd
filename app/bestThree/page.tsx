@@ -8,7 +8,7 @@ const BestSix = () => {
 			match: {
 				homeTeam: "Zenum",
 				awayTeam: "Vozdovac",
-				utcDate: "2025-10-06T14:00:00Z",
+				utcDate: "2025-10-05T14:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -21,7 +21,7 @@ const BestSix = () => {
 			match: {
 				homeTeam: "Hapoel Kfar Shalem",
 				awayTeam: "M. Herzliya",
-				utcDate: "2025-10-06T14:00:00Z",
+				utcDate: "2025-10-05T14:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -34,7 +34,7 @@ const BestSix = () => {
 			match: {
 				homeTeam: "Safi",
 				awayTeam: "FAR Rabat",
-				utcDate: "2025-10-06T14:00:00Z",
+				utcDate: "2025-10-05T14:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -47,7 +47,7 @@ const BestSix = () => {
 			match: {
 				homeTeam: "FC Vardar Skopje",
 				awayTeam: "FC Struga",
-				utcDate: "2025-10-06T14:00:00Z",
+				utcDate: "2025-10-05T14:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -60,7 +60,7 @@ const BestSix = () => {
 			match: {
 				homeTeam: "Testilac",
 				awayTeam: "FK Dubocia",
-				utcDate: "2025-10-06T14:00:00Z",
+				utcDate: "2025-10-05T14:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -73,7 +73,7 @@ const BestSix = () => {
 			match: {
 				homeTeam: "Chadormalu",
 				awayTeam: "Esteghlal Tehran",
-				utcDate: "2025-10-06T14:00:00Z",
+				utcDate: "2025-10-05T14:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -101,7 +101,7 @@ const BestSix = () => {
 						className='bg-zinc-900 rounded-xl border-2 border-green-600 p-5 flex flex-col gap-4 hover:border-green-400 transition-colors'
 					>
 						{/* Number Badge */}
-						<div className='flex justify-between items-center'>
+						{/* <div className='flex justify-between items-center'>
 							<span className='bg-green-600 text-black font-bold text-xs px-3 py-1 rounded-full'>
 								#{index + 1}
 							</span>
@@ -114,7 +114,7 @@ const BestSix = () => {
 							>
 								{prediction.match.status}
 							</span>
-						</div>
+						</div> */}
 
 						{/* Teams */}
 						<div className='text-center'>

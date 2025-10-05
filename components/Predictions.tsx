@@ -11,7 +11,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "Al Zawraa",
 				awayTeam: "Al Quwa Al Jawiya",
-				utcDate: "2025-10-06T14:00:00Z",
+				utcDate: "2025-10-05T14:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -24,7 +24,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "FK Macva Sabac",
 				awayTeam: "FK Loznica",
-				utcDate: "2025-10-06T14:00:00Z",
+				utcDate: "2025-10-05T14:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -37,7 +37,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "Hapoel Kfar Shalem FC",
 				awayTeam: "Maccabi Herzliya",
-				utcDate: "2025-10-06T15:00:00Z",
+				utcDate: "2025-10-05T15:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -50,7 +50,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "Chador Malu Yazd",
 				awayTeam: "Esteghlal FC",
-				utcDate: "2025-10-06T15:30:00Z",
+				utcDate: "2025-10-05T15:30:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -63,7 +63,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "Enppi Club",
 				awayTeam: "Zed FC",
-				utcDate: "2025-10-06T16:00:00Z",
+				utcDate: "2025-10-05T16:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -76,7 +76,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "Uniao SC Paredes",
 				awayTeam: "AD Marco 09",
-				utcDate: "2025-10-06T16:30:00Z",
+				utcDate: "2025-10-05T16:30:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -89,7 +89,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "FK Jezero Plav",
 				awayTeam: "OFK Petrovac",
-				utcDate: "2025-10-06T14:00:00Z",
+				utcDate: "2025-10-05T14:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -103,7 +103,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "Carrarese Calcio",
 				awayTeam: "Juve Stabia",
-				utcDate: "2025-10-06T17:00:00Z",
+				utcDate: "2025-10-05T17:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -116,7 +116,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "FK Zemun",
 				awayTeam: "FK Vozdovac Belgrade",
-				utcDate: "2025-10-06T15:00:00Z",
+				utcDate: "2025-10-05T15:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -129,7 +129,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "Floresta EC CE",
 				awayTeam: "Londrina EC PR",
-				utcDate: "2025-10-06T18:00:00Z",
+				utcDate: "2025-10-05T18:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -142,7 +142,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "Olympique Club de Safi",
 				awayTeam: "AS Far Rabat",
-				utcDate: "2025-10-06T18:00:00Z",
+				utcDate: "2025-10-05T18:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -156,7 +156,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "FK Sutjeska Niksic",
 				awayTeam: "FK Buducnost",
-				utcDate: "2025-10-06T16:00:00Z",
+				utcDate: "2025-10-05T16:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -169,7 +169,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "Gornik Zabrze",
 				awayTeam: "Legia Warszawa",
-				utcDate: "2025-10-06T17:30:00Z",
+				utcDate: "2025-10-05T17:30:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -182,7 +182,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "Copenhagen",
 				awayTeam: "FC Midtjylland",
-				utcDate: "2025-10-06T18:00:00Z",
+				utcDate: "2025-10-05T18:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -195,7 +195,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "AD Fafe",
 				awayTeam: "SC Sao Joao de Ver",
-				utcDate: "2025-10-06T16:30:00Z",
+				utcDate: "2025-10-05T16:30:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -208,7 +208,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "FK Tekstilac Odzaci",
 				awayTeam: "Gfk Dubocica",
-				utcDate: "2025-10-06T14:00:00Z",
+				utcDate: "2025-10-05T14:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -221,7 +221,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "FK Vardar Skopje",
 				awayTeam: "FC Struga Trim Lum",
-				utcDate: "2025-10-06T15:00:00Z",
+				utcDate: "2025-10-05T15:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -234,7 +234,7 @@ const Predictions = () => {
 			match: {
 				homeTeam: "FK Jezero Plav",
 				awayTeam: "OFK Petrovac",
-				utcDate: "2025-10-06T14:00:00Z",
+				utcDate: "2025-10-05T14:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -298,7 +298,7 @@ const Predictions = () => {
 						)} */}
 
 						{/* Status Badge */}
-						<div className='flex justify-center mt-2'>
+						{/* <div className='flex justify-center mt-2'>
 							<span
 								className={`px-3 py-1 rounded-full text-xs font-semibold ${
 									prediction.match.status === "PENDING"
@@ -308,7 +308,7 @@ const Predictions = () => {
 							>
 								{prediction.match.status}
 							</span>
-						</div>
+						</div> */}
 
 						{/* Result (if finished) */}
 						{prediction.match.status === "FINISHED" &&
