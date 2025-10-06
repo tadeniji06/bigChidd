@@ -9,9 +9,9 @@ const Predictions = () => {
 			odds: 2.95,
 			comment: "Multiple Draw Accumulator",
 			match: {
-				homeTeam: "Al Zawraa",
-				awayTeam: "Al Quwa Al Jawiya",
-				utcDate: "2025-10-05T14:00:00Z",
+				homeTeam: "Libertad",
+				awayTeam: "Trinidense",
+				utcDate: "2025-10-06T00:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -22,9 +22,9 @@ const Predictions = () => {
 			odds: 3.2,
 			comment: "Multiple Draw Accumulator",
 			match: {
-				homeTeam: "FK Macva Sabac",
-				awayTeam: "FK Loznica",
-				utcDate: "2025-10-05T14:00:00Z",
+				homeTeam: "Veraguas",
+				awayTeam: "Plaza Amador",
+				utcDate: "2025-10-05T00:15:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -35,9 +35,9 @@ const Predictions = () => {
 			odds: 3.4,
 			comment: "Multiple Draw Accumulator",
 			match: {
-				homeTeam: "Hapoel Kfar Shalem FC",
-				awayTeam: "Maccabi Herzliya",
-				utcDate: "2025-10-05T15:00:00Z",
+				homeTeam: "Rosario Central",
+				awayTeam: "River Plate",
+				utcDate: "2025-10-06T01:15:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -48,35 +48,35 @@ const Predictions = () => {
 			odds: 2.3,
 			comment: "Multiple Draw Accumulator",
 			match: {
-				homeTeam: "Chador Malu Yazd",
-				awayTeam: "Esteghlal FC",
-				utcDate: "2025-10-05T15:30:00Z",
+				homeTeam: "Pumas",
+				awayTeam: "Guadalajara",
+				utcDate: "2025-10-06T052:30:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
 		},
-		{
-			_id: "pred_005",
-			predictedWinner: "draw",
-			odds: 2.85,
-			comment: "Multiple Draw Accumulator",
-			match: {
-				homeTeam: "Enppi Club",
-				awayTeam: "Zed FC",
-				utcDate: "2025-10-05T16:00:00Z",
-				status: "PENDING",
-				finalResult: null,
-			},
-		},
+		// {
+		// 	_id: "pred_005",
+		// 	predictedWinner: "draw",
+		// 	odds: 2.85,
+		// 	comment: "Multiple Draw Accumulator",
+		// 	match: {
+		// 		homeTeam: "Real Espana",
+		// 		awayTeam: "Platenese",
+		// 		utcDate: "2025-10-06T02:30:00Z",
+		// 		status: "PENDING",
+		// 		finalResult: null,
+		// 	},
+		// },
 		{
 			_id: "pred_006",
 			predictedWinner: "draw",
 			odds: 3.25,
 			comment: "Multiple Draw Accumulator",
 			match: {
-				homeTeam: "Uniao SC Paredes",
-				awayTeam: "AD Marco 09",
-				utcDate: "2025-10-05T16:30:00Z",
+				homeTeam: "Tijuana",
+				awayTeam: "Monterrey",
+				utcDate: "2025-10-06T04:05:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -87,9 +87,9 @@ const Predictions = () => {
 			odds: 3.0,
 			comment: "Multiple Draw Accumulator",
 			match: {
-				homeTeam: "FK Jezero Plav",
-				awayTeam: "OFK Petrovac",
-				utcDate: "2025-10-05T14:00:00Z",
+				homeTeam: "FC Fard",
+				awayTeam: "Shahrdari Nowshahr",
+				utcDate: "2025-10-06T14:30:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -101,9 +101,9 @@ const Predictions = () => {
 			odds: 3.1,
 			comment: "Multiple Draw Accumulator",
 			match: {
-				homeTeam: "Carrarese Calcio",
-				awayTeam: "Juve Stabia",
-				utcDate: "2025-10-05T17:00:00Z",
+				homeTeam: "Shenavar Sazi Qeshm",
+				awayTeam: "Navad Urmia",
+				utcDate: "2025-10-06T16:30:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -114,9 +114,9 @@ const Predictions = () => {
 			odds: 2.95,
 			comment: "Multiple Draw Accumulator",
 			match: {
-				homeTeam: "FK Zemun",
-				awayTeam: "FK Vozdovac Belgrade",
-				utcDate: "2025-10-05T15:00:00Z",
+				homeTeam: "KAMAZ",
+				awayTeam: "Ural",
+				utcDate: "2025-10-06T17:30:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -127,9 +127,9 @@ const Predictions = () => {
 			odds: 2.65,
 			comment: "Second Betting Slip",
 			match: {
-				homeTeam: "Floresta EC CE",
-				awayTeam: "Londrina EC PR",
-				utcDate: "2025-10-05T18:00:00Z",
+				homeTeam: "FC Botosani",
+				awayTeam: "UTA Arad",
+				utcDate: "2025-10-06T18:30:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
@@ -140,106 +140,108 @@ const Predictions = () => {
 			odds: 2.65,
 			comment: "Second Betting Slip",
 			match: {
-				homeTeam: "Olympique Club de Safi",
-				awayTeam: "AS Far Rabat",
+				homeTeam: "Dep. Riestra",
+				awayTeam: "Velez Sarsfield",
 				utcDate: "2025-10-05T18:00:00Z",
 				status: "PENDING",
 				finalResult: null,
 			},
 			// isCorrect: false,
 		},
-		{
-			_id: "pred_012",
-			predictedWinner: "draw",
-			odds: 3.3,
-			comment: "Second Betting Slip",
-			match: {
-				homeTeam: "FK Sutjeska Niksic",
-				awayTeam: "FK Buducnost",
-				utcDate: "2025-10-05T16:00:00Z",
-				status: "PENDING",
-				finalResult: null,
-			},
-		},
-		{
-			_id: "pred_013",
-			predictedWinner: "draw",
-			odds: 3.4,
-			comment: "Second Betting Slip",
-			match: {
-				homeTeam: "Gornik Zabrze",
-				awayTeam: "Legia Warszawa",
-				utcDate: "2025-10-05T17:30:00Z",
-				status: "PENDING",
-				finalResult: null,
-			},
-		},
-		{
-			_id: "pred_014",
-			predictedWinner: "draw",
-			odds: 3.75,
-			comment: "Second Betting Slip",
-			match: {
-				homeTeam: "Copenhagen",
-				awayTeam: "FC Midtjylland",
-				utcDate: "2025-10-05T18:00:00Z",
-				status: "PENDING",
-				finalResult: null,
-			},
-		},
-		{
-			_id: "pred_015",
-			predictedWinner: "draw",
-			odds: 3.7,
-			comment: "Second Betting Slip",
-			match: {
-				homeTeam: "AD Fafe",
-				awayTeam: "SC Sao Joao de Ver",
-				utcDate: "2025-10-05T16:30:00Z",
-				status: "PENDING",
-				finalResult: null,
-			},
-		},
-		{
-			_id: "pred_016",
-			predictedWinner: "draw",
-			odds: 3.2,
-			comment: "Second Betting Slip",
-			match: {
-				homeTeam: "FK Tekstilac Odzaci",
-				awayTeam: "Gfk Dubocica",
-				utcDate: "2025-10-05T14:00:00Z",
-				status: "PENDING",
-				finalResult: null,
-			},
-		},
-		{
-			_id: "pred_017",
-			predictedWinner: "draw",
-			odds: 3.4,
-			comment: "Second Betting Slip",
-			match: {
-				homeTeam: "FK Vardar Skopje",
-				awayTeam: "FC Struga Trim Lum",
-				utcDate: "2025-10-05T15:00:00Z",
-				status: "PENDING",
-				finalResult: null,
-			},
-		},
-		{
-			_id: "pred_018",
-			predictedWinner: "draw",
-			odds: 3.0,
-			comment: "Second Betting Slip",
-			match: {
-				homeTeam: "FK Jezero Plav",
-				awayTeam: "OFK Petrovac",
-				utcDate: "2025-10-05T14:00:00Z",
-				status: "PENDING",
-				finalResult: null,
-			},
-			isCorrect: true,
-		},
+
+		//  stop
+		// {
+		// 	_id: "pred_012",
+		// 	predictedWinner: "draw",
+		// 	odds: 3.3,
+		// 	comment: "Second Betting Slip",
+		// 	match: {
+		// 		homeTeam: "FK Sutjeska Niksic",
+		// 		awayTeam: "FK Buducnost",
+		// 		utcDate: "2025-10-05T16:00:00Z",
+		// 		status: "PENDING",
+		// 		finalResult: null,
+		// 	},
+		// },
+		// {
+		// 	_id: "pred_013",
+		// 	predictedWinner: "draw",
+		// 	odds: 3.4,
+		// 	comment: "Second Betting Slip",
+		// 	match: {
+		// 		homeTeam: "Gornik Zabrze",
+		// 		awayTeam: "Legia Warszawa",
+		// 		utcDate: "2025-10-05T17:30:00Z",
+		// 		status: "PENDING",
+		// 		finalResult: null,
+		// 	},
+		// },
+		// {
+		// 	_id: "pred_014",
+		// 	predictedWinner: "draw",
+		// 	odds: 3.75,
+		// 	comment: "Second Betting Slip",
+		// 	match: {
+		// 		homeTeam: "Copenhagen",
+		// 		awayTeam: "FC Midtjylland",
+		// 		utcDate: "2025-10-05T18:00:00Z",
+		// 		status: "PENDING",
+		// 		finalResult: null,
+		// 	},
+		// },
+		// {
+		// 	_id: "pred_015",
+		// 	predictedWinner: "draw",
+		// 	odds: 3.7,
+		// 	comment: "Second Betting Slip",
+		// 	match: {
+		// 		homeTeam: "AD Fafe",
+		// 		awayTeam: "SC Sao Joao de Ver",
+		// 		utcDate: "2025-10-05T16:30:00Z",
+		// 		status: "PENDING",
+		// 		finalResult: null,
+		// 	},
+		// },
+		// {
+		// 	_id: "pred_016",
+		// 	predictedWinner: "draw",
+		// 	odds: 3.2,
+		// 	comment: "Second Betting Slip",
+		// 	match: {
+		// 		homeTeam: "FK Tekstilac Odzaci",
+		// 		awayTeam: "Gfk Dubocica",
+		// 		utcDate: "2025-10-05T14:00:00Z",
+		// 		status: "PENDING",
+		// 		finalResult: null,
+		// 	},
+		// },
+		// {
+		// 	_id: "pred_017",
+		// 	predictedWinner: "draw",
+		// 	odds: 3.4,
+		// 	comment: "Second Betting Slip",
+		// 	match: {
+		// 		homeTeam: "FK Vardar Skopje",
+		// 		awayTeam: "FC Struga Trim Lum",
+		// 		utcDate: "2025-10-05T15:00:00Z",
+		// 		status: "PENDING",
+		// 		finalResult: null,
+		// 	},
+		// },
+		// {
+		// 	_id: "pred_018",
+		// 	predictedWinner: "draw",
+		// 	odds: 3.0,
+		// 	comment: "Second Betting Slip",
+		// 	match: {
+		// 		homeTeam: "FK Jezero Plav",
+		// 		awayTeam: "OFK Petrovac",
+		// 		utcDate: "2025-10-05T14:00:00Z",
+		// 		status: "PENDING",
+		// 		finalResult: null,
+		// 	},
+		// 	isCorrect: true,
+		// },
 	]);
 
 	return (
@@ -321,7 +323,7 @@ const Predictions = () => {
 										{prediction.match.finalResult.homeGoals} -{" "}
 										{prediction.match.finalResult.awayGoals}
 									</p> */}
-									{prediction.isCorrect !== undefined && (
+									{/* {prediction.isCorrect !== undefined && (
 										<p
 											className={`text-sm font-semibold mt-2 ${
 												prediction.isCorrect
@@ -331,7 +333,7 @@ const Predictions = () => {
 										>
 											{prediction.isCorrect ? "✅ WIN" : "❌ LOST"}
 										</p>
-									)}
+									)} */}
 								</div>
 							)}
 					</div>
