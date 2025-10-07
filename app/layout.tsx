@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
+import ClarityScript from "@/components/Clarity";
 import Adsense from "@/components/Adsense";
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({
 				{children}
 				<Footer />
 				<Adsense />
+				<ClarityScript />
 			</body>
 		</html>
 	);
