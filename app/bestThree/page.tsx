@@ -13,10 +13,11 @@ const BestSix = () => {
           *[_type == "bestSix"] | order(week desc)[0] {
             _id,
             week,
-            "matches": picks[]{
+            "matches": picks[] {
               homeTeam,
               awayTeam,
-              matchTime
+              matchTime,
+              odds
             }
           }
         `);
@@ -26,7 +27,7 @@ const BestSix = () => {
 						(match: any, index: number) => ({
 							_id: `pre_${index}`,
 							predictedWinner: "draw",
-							odds: (2.7 + Math.random() * 0.7).toFixed(2),
+							odds: match.odds?.toFixed(2),
 							comment: `Best 6 - Week ${data.week}`,
 							match: {
 								homeTeam: match.homeTeam,
@@ -107,8 +108,10 @@ const BestSix = () => {
 									month: "short",
 									hour: "2-digit",
 									minute: "2-digit",
+									timeZone: "UTC",
 								}
-							)}
+							)}{" "}
+							UTC
 						</p>
 					</div>
 				))}
