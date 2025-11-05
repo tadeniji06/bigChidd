@@ -21,8 +21,6 @@ const Hero = () => {
 		{ icon: "mdi:soccer", name: "Football" },
 		{ icon: "mdi:tennis", name: "Tennis" },
 		{ icon: "mdi:basketball", name: "Basketball" },
-		{ icon: "mdi:horse-variant", name: "Horse Racing" },
-		{ icon: "mdi:hockey-sticks", name: "Hockey" },
 		{ icon: "mdi:table-tennis", name: "Table Tennis" },
 	];
 
@@ -217,28 +215,32 @@ const Hero = () => {
 							</h3>
 							<div className='grid grid-cols-3 gap-4'>
 								{sports.map((sport, index) => (
-									<div
-										key={sport.name}
-										className='flex flex-col items-center gap-2 p-3 bg-gray-800/50 rounded-lg hover:bg-green-600/20 hover:border-green-600 border border-transparent transition-all duration-300 cursor-pointer group'
-										style={{
-											animation: `slideIn 0.5s ease-out ${
-												index * 0.1
-											}s both`,
-										}}
+									<Link
+										href={`/codes?type=${sport.name.toLowerCase()}`}
 									>
-										<Icon
-											icon={sport.icon}
-											className='w-8 h-8 text-green-400 group-hover:scale-110 transition-transform'
-										/>
-										<span className='text-xs text-gray-400 group-hover:text-green-400 transition-colors'>
-											{sport.name}
-										</span>
-									</div>
+										<div
+											key={sport.name}
+											className='flex flex-col items-center gap-2 p-3 bg-gray-800/50 rounded-lg hover:bg-green-600/20 hover:border-green-600 border border-transparent transition-all duration-300 cursor-pointer group'
+											style={{
+												animation: `slideIn 0.5s ease-out ${
+													index * 0.1
+												}s both`,
+											}}
+										>
+											<Icon
+												icon={sport.icon}
+												className='w-8 h-8 text-green-400 group-hover:scale-110 transition-transform'
+											/>
+											<span className='text-xs text-gray-400 group-hover:text-green-400 transition-colors'>
+												{sport.name}
+											</span>
+										</div>
+									</Link>
 								))}
 							</div>
-							<p className='text-center text-sm text-gray-500 mt-4'>
+							{/* <p className='text-center text-sm text-gray-500 mt-4'>
 								+ 6 more sports
-							</p>
+							</p> */}
 						</div>
 					</div>
 				</div>
@@ -246,7 +248,7 @@ const Hero = () => {
 				{/* Bottom Feature Strip */}
 				<div className='mt-16 pt-8 border-t border-gray-800'>
 					<div className='grid grid-cols-2 md:grid-cols-4 gap-6 text-center'>
-						<div className='space-y-2'>
+						{/* <div className='space-y-2'>
 							<Icon
 								icon='mdi:brain'
 								className='w-8 h-8 mx-auto text-green-400'
@@ -254,7 +256,7 @@ const Hero = () => {
 							<p className='text-sm text-gray-400'>
 								AI-Powered Analysis
 							</p>
-						</div>
+						</div> */}
 						<div className='space-y-2'>
 							<Icon
 								icon='mdi:update'
