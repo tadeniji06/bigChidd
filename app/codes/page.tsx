@@ -1,10 +1,14 @@
+import { Suspense } from "react";
 import Codes from "@/components/Codes";
 
-const page = () => {
+export default function CodesPage() {
 	return (
-		<div>
+		<Suspense
+			fallback={
+				<div className='text-white text-center py-10'>Loading...</div>
+			}
+		>
 			<Codes />
-		</div>
+		</Suspense>
 	);
-};
-export default page;
+}
