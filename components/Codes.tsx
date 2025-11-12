@@ -12,20 +12,20 @@ const Codes = () => {
 	// 🧩 All unique codes by sport + bookie
 	const allCodes = {
 		Football: {
-			"1xBet": ["FT7D3Y", "A92KLM", "ZP4WQ8"],
-			SportyBet: ["SPT-9034", "SPT-1458", "SPT-4410"],
+			"1xBet": ["J8T93"],
+			SportyBet: ["GZEBLR"],
 		},
 		Tennis: {
-			"1xBet": ["TNX-112", "TNX-345", "TNX-992"],
-			SportyBet: ["TNS-550", "TNS-882", "TNS-613"],
+			"1xBet": ['No Codes Available'],
+			SportyBet: ["No Codes Available"],
 		},
 		Basketball: {
-			"1xBet": ["BB1-232", "BB1-445", "BB1-667"],
-			SportyBet: ["BBS-990", "BBS-771", "BBS-228"],
+			"1xBet": ["No	Codes Available"],
+			SportyBet: ["No Codes Available"],
 		},
 		"Table Tennis": {
-			"1xBet": ["TT1-111", "TT1-222", "TT1-333"],
-			SportyBet: ["TTS-444", "TTS-555", "TTS-666"],
+			"1xBet": ["No Codes Available"],
+			SportyBet: ["No Codes Available"],
 		},
 	};
 
