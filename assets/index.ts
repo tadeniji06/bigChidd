@@ -2,5 +2,6 @@ import logo1 from "./BIG CHIDD black.png";
 import logo2 from "./BIG CHIDD grren bb.png";
 import logo3 from "./BIG CHIDD grren.png";
 import logo4 from "./BIG CHIDD white.png";
+import win1 from "./chiid.jpg";
 
-export { logo1, logo2, logo3, logo4 };
+export { logo1, logo2, logo3, logo4, win1 };

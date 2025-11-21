@@ -4,6 +4,10 @@ export const headerLinks = [
 		link: "/tips",
 	},
 	{
+		title:"Winnings",
+		link: "/winnings",
+	},
+	{
 		title: "Best 6 Tips",
 		link: "/bestThree",
 	},
