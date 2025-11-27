@@ -13,7 +13,7 @@ const Codes = () => {
 	const allCodes = {
 		Football: {
 			"1xBet": ["SV3AL"],
-			SportyBet: ["P1PM9V"],
+			SportyBet: ["N7L91N"],
 		},
 		Tennis: {
 			"1xBet": ["No Codes Available"],
