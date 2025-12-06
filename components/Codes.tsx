@@ -12,8 +12,8 @@ const Codes = () => {
 	// 🧩 All unique codes by sport + bookie
 	const allCodes = {
 		Football: {
-			"1xBet": ["X25S8"],
-			SportyBet: ["HAL8GJ"],
+			"1xBet": ["6TSKY"],
+			SportyBet: ["MZA6ET"],
 		},
 		Tennis: {
 			"1xBet": ["No Codes Available"],
