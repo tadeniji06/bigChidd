@@ -1,42 +1,49 @@
+// Codes.tsx
 "use client";
+
 import { useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
+import { ft } from "@/assets";
+import FlyerBanner from "@/components/ui/FlyerBanner";
+import { ref_link } from "@/utils/data";
+import { motion } from "framer-motion";
 
-const Codes = () => {
+type Bookie = "1xBet" | "SportyBet";
+type Toast = string | null;
+
+const allCodes: Record<string, Record<Bookie, string[]>> = {
+	Football: {
+		"1xBet": ["8PPUZ"],
+		SportyBet: ["J4YS9T"],
+	},
+	Tennis: {
+		"1xBet": ["No Codes Available"],
+		SportyBet: ["No Codes Available"],
+	},
+	Basketball: {
+		"1xBet": ["No Codes Available"],
+		SportyBet: ["No Codes Available"],
+	},
+	"Table Tennis": {
+		"1xBet": ["No Codes Available"],
+		SportyBet: ["No Codes Available"],
+	},
+};
+
+export default function Codes(): React.ReactElement {
 	const params = useSearchParams();
-	const sport = params.get("type") || "Football";
-	const [activeBookie, setActiveBookie] = useState("1xBet");
-	const [toast, setToast] = useState(null);
+	const sport = (params?.get("type") as string) || "Football";
+	const [activeBookie, setActiveBookie] = useState<Bookie>("1xBet");
+	const [toast, setToast] = useState<Toast>(null);
 
-	// 🧩 All unique codes by sport + bookie
-	const allCodes = {
-		Football: {
-			"1xBet": ["8PPUZ"],
-			SportyBet: ["J4YS9T"],
-		},
-		Tennis: {
-			"1xBet": ["No Codes Available"],
-			SportyBet: ["No Codes Available"],
-		},
-		Basketball: {
-			"1xBet": ["No	Codes Available"],
-			SportyBet: ["No Codes Available"],
-		},
-		"Table Tennis": {
-			"1xBet": ["No Codes Available"],
-			SportyBet: ["No Codes Available"],
-		},
-	};
+	const betCodes = allCodes[sport] ?? allCodes["Football"];
 
-	const betCodes = allCodes[sport] || allCodes["Football"];
-
-	const copyCode = async (code) => {
+	const copyCode = async (code: string) => {
 		try {
 			if (navigator.clipboard && window.isSecureContext) {
 				await navigator.clipboard.writeText(code);
 			} else {
-				// Fallback for iOS/Safari
 				const textArea = document.createElement("textarea");
 				textArea.value = code;
 				textArea.style.position = "fixed";
@@ -49,24 +56,21 @@ const Codes = () => {
 				document.body.removeChild(textArea);
 			}
 			setToast(`Copied ${code} ✅`);
-		} catch (error) {
-			console.error("Copy failed:", error);
+		} catch {
 			setToast("Failed to copy 😞");
 		}
 	};
 
 	useEffect(() => {
-		if (toast) {
-			const timer = setTimeout(() => setToast(null), 2000);
-			return () => clearTimeout(timer);
-		}
+		if (!toast) return;
+		const timer = setTimeout(() => setToast(null), 2000);
+		return () => clearTimeout(timer);
 	}, [toast]);
 
 	return (
 		<div className='relative min-h-screen bg-gradient-to-br from-gray-950 via-black to-gray-900 text-white px-6 py-12'>
-			{/* Toast Notification */}
 			{toast && (
-				<div className='fixed top-16 left-1/2 -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-full shadow-lg animate-fadeIn z-50'>
+				<div className='fixed top-16 left-1/2 -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-full shadow-lg z-50'>
 					{toast}
 				</div>
 			)}
@@ -92,9 +96,10 @@ const Codes = () => {
 					{sport} Bet Codes
 				</h1>
 
-				{/* Bookie Toggle */}
+				<FlyerBanner img={ft} link={ref_link} />
+
 				<div className='flex justify-center gap-4 mb-8'>
-					{["1xBet", "SportyBet"].map((bookie) => (
+					{(["1xBet", "SportyBet"] as Bookie[]).map((bookie) => (
 						<button
 							key={bookie}
 							onClick={() => setActiveBookie(bookie)}
@@ -109,11 +114,13 @@ const Codes = () => {
 					))}
 				</div>
 
-				{/* Bet Codes List */}
 				<div className='grid gap-4'>
 					{betCodes[activeBookie].map((code, i) => (
-						<div
-							key={i}
+						<motion.div
+							key={`${code}-${i}`}
+							initial={{ opacity: 0, y: 8 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.25, delay: i * 0.03 }}
 							className='flex justify-between items-center bg-gray-800/60 border border-gray-700 hover:border-green-600 rounded-xl p-4 transition-all select-none'
 						>
 							<p className='text-lg font-semibold text-green-400'>
@@ -124,9 +131,11 @@ const Codes = () => {
 								<button
 									onClick={() => copyCode(code)}
 									className='p-2 rounded-lg bg-green-600 hover:bg-green-700 transition'
+									aria-label={`Copy code ${code}`}
 								>
 									<Icon icon='mdi:content-copy' className='w-5 h-5' />
 								</button>
+
 								<a
 									href={
 										activeBookie === "1xBet"
@@ -134,13 +143,13 @@ const Codes = () => {
 											: "https://sportybet.com"
 									}
 									target='_blank'
-									rel='noopener noreferrer'
+									rel='noreferrer'
 									className='p-2 rounded-lg bg-gray-700 hover:bg-green-700 transition'
 								>
 									<Icon icon='mdi:open-in-new' className='w-5 h-5' />
 								</a>
 							</div>
-						</div>
+						</motion.div>
 					))}
 				</div>
 
@@ -151,6 +160,4 @@ const Codes = () => {
 			</div>
 		</div>
 	);
-};
-
-export default Codes;
+}

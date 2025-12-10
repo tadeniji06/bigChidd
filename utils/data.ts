@@ -4,7 +4,7 @@ export const headerLinks = [
 		link: "/tips",
 	},
 	{
-		title:"Winnings",
+		title: "Winnings",
 		link: "/winnings",
 	},
 	{
@@ -16,6 +16,9 @@ export const headerLinks = [
 		link: "https://x.com/Big_Chidd__",
 	},
 ];
+
+export const ref_link =
+	"https://refpa35840.pro/L?tag=d_5024584m_126203c_&site=5024584&ad=126203";
 
 export const socials = [
 	{

@@ -1,15 +1,48 @@
+// Predictions.tsx
 "use client";
-import { useEffect, useState } from "react";
-import { sanity } from "@/utils/sanity";
 
-const Predictions = () => {
-	const [predictions, setPredictions] = useState<any[]>([]);
-	const [loading, setLoading] = useState(true);
+import React, { useEffect, useState } from "react";
+import { bcdt } from "@/assets";
+import { sanity } from "@/utils/sanity";
+import FlyerBanner from "@/components/ui/FlyerBanner";
+import { ref_link } from "@/utils/data";
+import { motion } from "framer-motion";
+
+interface MatchRaw {
+	homeTeam: string;
+	awayTeam: string;
+	matchTime: string;
+	odds?: number | string | null;
+}
+
+interface FetchedAllTips {
+	_id?: string;
+	week?: number | string;
+	matches?: MatchRaw[];
+}
+
+interface Prediction {
+	_id: string;
+	predictedWinner: string;
+	odds?: string | null;
+	comment?: string;
+	match: {
+		homeTeam: string;
+		awayTeam: string;
+		utcDate: string;
+		status: string;
+		finalResult: any;
+	};
+}
+
+export default function Predictions(): React.ReactElement {
+	const [predictions, setPredictions] = useState<Prediction[]>([]);
+	const [loading, setLoading] = useState<boolean>(true);
 
 	useEffect(() => {
 		const fetchPredictions = async () => {
 			try {
-				const data = await sanity.fetch(`
+				const data: FetchedAllTips | null = await sanity.fetch(`
           *[_type == "allTips"] | order(week desc)[0] {
             _id,
             week,
@@ -23,11 +56,14 @@ const Predictions = () => {
         `);
 
 				if (data?.matches) {
-					const formatted = data.matches.map(
-						(match: any, index: number) => ({
+					const formatted: Prediction[] = data.matches.map(
+						(match, index) => ({
 							_id: `pred_${index}`,
 							predictedWinner: "draw",
-							odds: match.odds?.toFixed(2),
+							odds:
+								match.odds != null
+									? String(Number(match.odds).toFixed(2))
+									: null,
 							comment: `Multiple Draw Accumulator - Week ${data.week}`,
 							match: {
 								homeTeam: match.homeTeam,
@@ -40,8 +76,8 @@ const Predictions = () => {
 					);
 					setPredictions(formatted);
 				}
-			} catch (error) {
-				console.error("Failed to fetch predictions:", error);
+			} catch {
+				// noop
 			} finally {
 				setLoading(false);
 			}
@@ -50,7 +86,7 @@ const Predictions = () => {
 		fetchPredictions();
 	}, []);
 
-	if (loading)
+	if (loading) {
 		return (
 			<div className='bg-black min-h-screen flex items-center justify-center'>
 				<p className='text-green-400 animate-pulse'>
@@ -58,17 +94,24 @@ const Predictions = () => {
 				</p>
 			</div>
 		);
+	}
 
 	return (
 		<div className='bg-black min-h-screen py-6 px-4'>
-			<h1 className='text-3xl font-bold text-green-400 mb-8 text-center'>
+			<h1 className='text-3xl font-bold text-green-400 mb-4 text-center'>
 				Football Predictions
 			</h1>
 
-			<div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
-				{predictions.map((prediction) => (
-					<div
+			<FlyerBanner img={bcdt} link={ref_link} />
+
+			<div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-4'>
+				{predictions.map((prediction, idx) => (
+					<motion.div
 						key={prediction._id}
+						initial={{ opacity: 0, y: 8 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.3, delay: idx * 0.03 }}
+						whileHover={{ scale: 1.01 }}
 						className='bg-zinc-900 rounded-2xl shadow-lg border border-green-600 p-4 flex flex-col gap-3'
 					>
 						<div className='flex justify-between items-center'>
@@ -105,11 +148,9 @@ const Predictions = () => {
 								Odds: {prediction.odds}
 							</p>
 						</div>
-					</div>
+					</motion.div>
 				))}
 			</div>
 		</div>
 	);
-};
-
-export default Predictions;
+}

@@ -3,5 +3,9 @@ import logo2 from "./BIG CHIDD grren bb.png";
 import logo3 from "./BIG CHIDD grren.png";
 import logo4 from "./BIG CHIDD white.png";
 import win1 from "./chiid.jpg";
+import bcb6 from "./bcB6.jpg";
+import bcdt from "./bcDT.jpg";
+import bchome from "./bcHome.jpg";
+import ft from "./ft.jpg";
 
-export { logo1, logo2, logo3, logo4, win1 };
+export { logo1, logo2, logo3, logo4, win1, bcb6, bcdt, bchome, ft };
