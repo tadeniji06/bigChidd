@@ -21,7 +21,7 @@ const HomePopup = () => {
 		// Regular interval popup
 		const interval = setInterval(() => {
 			setOpen(true);
-		}, 90 * 1000); // 1.5 minutes
+		}, 90 * 500);
 
 		return () => clearInterval(interval);
 	}, []);
