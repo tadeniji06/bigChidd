@@ -15,7 +15,7 @@ type Toast = string | null;
 const allCodes: Record<string, Record<Bookie, string[]>> = {
 	Football: {
 		"1xBet": ["3ZURB"],
-		SportyBet: ["LNFWS1"],
+		SportyBet: ["QUN2JL"],
 	},
 	Tennis: {
 		"1xBet": ["No Codes Available"],
