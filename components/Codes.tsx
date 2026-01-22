@@ -1,6 +1,4 @@
-// Codes.tsx
 "use client";
-
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
@@ -15,7 +13,7 @@ type Toast = string | null;
 const allCodes: Record<string, Record<Bookie, string[]>> = {
 	Football: {
 		"1xBet": ["3ZURB"],
-		SportyBet: ["QFUWZ8"],
+		SportyBet: ["944B4"],
 	},
 	Tennis: {
 		"1xBet": ["No Codes Available"],
