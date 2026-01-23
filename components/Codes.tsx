@@ -137,7 +137,7 @@ export default function Codes(): React.ReactElement {
 								<a
 									href={
 										activeBookie === "1xBet"
-											? "https://1xbet.com"
+											? "https://tinyurl.com/2pwya9wx"
 											: "https://sportybet.com"
 									}
 									target='_blank'

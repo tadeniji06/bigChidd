@@ -7,5 +7,5 @@ import bcb6 from "./bcB6.jpg";
 import bcdt from "./bcDT.jpg";
 import bchome from "./bcHome.jpg";
 import ft from "./ft.jpg";
-
-export { logo1, logo2, logo3, logo4, win1, bcb6, bcdt, bchome, ft };
+import onex from "./1x.jpeg";
+export { logo1, logo2, logo3, logo4, win1, bcb6, bcdt, bchome, ft, onex };
